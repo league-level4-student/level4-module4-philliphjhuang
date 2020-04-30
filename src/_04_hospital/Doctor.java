@@ -1,14 +1,32 @@
 package _04_hospital;
 
-public abstract class Doctor {
+import java.util.ArrayList;
 
+public class Doctor {
+	ArrayList<Patient> patients = new ArrayList<Patient>();
+	public boolean performsSurgery() {
+		return false;
+	}
+	public boolean makesHouseCalls() {
+		return false;
+	}
 	
+	public void assignPatient(Patient p) {
+		patients.add(p);
+	}
 }
 
 class GeneralPractitioner extends Doctor {
-	
+	public boolean makesHouseCalls() {
+		return true;
+	}
 }
 
 class Surgeon extends Doctor{
-	
+	public boolean performsSurgery() {
+		return true;
+	}
+	public boolean makesHouseCalls() {
+		return false;
+	}
 }

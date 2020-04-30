@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Hospital {
 	ArrayList<Doctor> d = new ArrayList<Doctor>();
 	ArrayList<Patient> p = new ArrayList<Patient>();
+	
 	public void addDoctor(Doctor d) {
 		this.d.add(d);
 	}
