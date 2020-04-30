@@ -14,11 +14,17 @@ public class Doctor {
 	public void assignPatient(Patient p) {
 		patients.add(p);
 	}
+	public ArrayList<Patient> getPatients(){
+		return patients;
+	}
 }
 
 class GeneralPractitioner extends Doctor {
 	public boolean makesHouseCalls() {
 		return true;
+	}
+	public boolean doMedicine() {
+		return checkPulse();
 	}
 }
 
